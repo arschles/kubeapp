@@ -17,7 +17,7 @@ type FakeGetter struct {
 	Err error
 }
 
-// Get is the Getter interface implementation. It simply returns f.RCList, f.Err
-func (f FakeGetter) Get(api.ListOptions) (*api.ReplicationController, error) {
+// Get is the Getter interface implementation. It simply returns f.RC, f.Err
+func (f FakeGetter) Get(name string) (*api.ReplicationController, error) {
 	return f.RC, f.Err
 }
